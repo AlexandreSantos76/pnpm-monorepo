@@ -1,14 +1,38 @@
 {
   "name": "pnpm-nx-repo",
   "version": "1.0.0",
-  "description": "",
+  "description": "A monorepo using Nx, pnpm, TypeScript, Next.js, and NestJS.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "nx",
+    "pnpm",
+    "monorepo",
+    "typescript",
+    "microservices",
+    "nextjs",
+    "nestjs"
+  ],
+  "author": "Alexandre Oliveira Santos",
+  "license": "UNLICENSED",
   "devDependencies": {
-    "nx": "^20.2.1"
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
+    "conventional-changelog-cli": "^5.0.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^9.16.0",
+    "husk": "^0.5.3",
+    "nx": "^20.2.2",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.2"
+  },
+  "overrides": {
+    "@humanwhocodes/config-array": "@eslint/config-array"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
