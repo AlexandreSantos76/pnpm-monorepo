@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "A monorepo using Nx, pnpm, TypeScript, Next.js, and NestJS.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "check-engines": "pnpm run check-engines -r",
+    "prebuild": "npm run check-engines",
+    "prepare": "husky install",
+    "prettier": "./node_modules/.bin/prettier --check \"**/*.{js,json,ts,yml,yaml}\"",
+    "prettier:write": "./node_modules/.bin/prettier --write \"**/*.{js,json,ts,yml,yaml}\""
   },
   "keywords": [
     "nx",
@@ -22,7 +26,7 @@
     "conventional-changelog-cli": "^5.0.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^9.16.0",
-    "husk": "^0.5.3",
+    "husky": "^9.1.7",
     "nx": "^20.2.2",
     "prettier": "^3.4.2",
     "typescript": "^5.7.2"
